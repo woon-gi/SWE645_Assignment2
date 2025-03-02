@@ -33,7 +33,7 @@ pipeline {
     stage('Deploy to Rancher') {
       steps {
         script {
-          sh 'kubectl set image deployment/swe645deployment container-0=dhwanii08/whong4_hw2_swe_645_survey:$BUILD_NUMBER'
+          sh 'kubectl set image deployment/swe-645-assign2-survey-form container-0=dhwanii08/whong4_hw2_swe_645_survey:$BUILD_NUMBER'
         }
       }
     }
