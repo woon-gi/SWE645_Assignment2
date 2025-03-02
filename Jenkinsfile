@@ -25,7 +25,7 @@ pipeline {
     stage('Push to Docker Hub') {
       steps {
         script {
-            sh 'sudo docker push dhwanii08/whong4_hw2_swe_645_survey:$BUILD_NUMBER'
+            sh 'docker push dhwanii08/whong4_hw2_swe_645_survey:$BUILD_NUMBER'
           }
         }
       }
