@@ -17,7 +17,7 @@ pipeline {
             withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
 				sh 'echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin'
 			}
-            sh 'sudo docker build -t dhwanii08/whong4_hw2_swe_645_survey:$BUILD_NUMBER .'
+            sh 'docker build -t dhwanii08/whong4_hw2_swe_645_survey:$BUILD_NUMBER .'
         }
       }
     }
