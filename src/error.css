@@ -1,0 +1,26 @@
+/* CSS for error.html file hosted on S3
+Name: Woon Gi Hong
+G#: G01032192
+Course-Section: SWE645-001
+Assignment 1
+*/
+
+/*Error Container styling*/
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.error-container h1 {
+    font-size: 2.5rem;
+}
+
+.error-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}

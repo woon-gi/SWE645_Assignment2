@@ -1,0 +1,120 @@
+<!-- Survey Form HTML file hosted on Apache Web Server in EC2 Instance
+Name: Woon Gi Hong
+G#: G01032192
+Course-Section: SWE645-001
+Assignment 1
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Survey Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="studentSurveyFormStyles.css">
+</head>
+<body>
+
+    <!-- Homepage Header with Navigation Bar -->
+    <div class="w3-container w3-green">
+        <img src="George-Mason-University-New.png" alt="School Logo" class="school-logo">
+        <nav class="navbar">
+            <a href="http://swe645-task-1.s3-website-us-east-1.amazonaws.com">Home</a>
+            <a href="http://swe645-task-1.s3-website-us-east-1.amazonaws.com/#about-me">About Me</a>
+            <a href="http://ec2-44-203-162-85.compute-1.amazonaws.com/student-survey-form.html">Survey Form</a>
+        </nav>
+    </div>
+
+    <div class="w3-container w3-center">
+        <h2>Student Survey Form</h2>
+    </div>
+
+    <div class="w3-container">
+        <p class="required-text"><span class="required"></span><b> Marks Required Fields</b></p>
+    </div>
+
+    <div class="w3-container w3-padding">
+        <form id="survey-form" class="w3-card w3-padding">
+
+            <!-- Personal Information Section -->
+            <label for="firstName" class="required-field">First Name:</label>
+            <input type="text" name="first_name" class="w3-input w3-border" required>
+
+            <label for="lastName" class="required-field">Last Name:</label>
+            <input type="text" name="last_name" class="w3-input w3-border" required>
+
+            <label for="address" class="required-field">Street Address:</label>
+            <input type="text" name="street_address" class="w3-input w3-border" required>
+
+            <label for="city" class="required-field">City:</label>
+            <input type="text" name="city" class="w3-input w3-border" required>
+
+            <label for="state" class="required-field">State:</label>
+            <input type="text" name="state" class="w3-input w3-border" required>
+
+            <label for="zipCode" class="required-field">Zip Code:</label>
+            <input type="text" name="zip" class="w3-input w3-border" required>
+
+            <label for="phone" class="required-field">Telephone Number:</label>
+            <input type="tel" name="telephone" class="w3-input w3-border" required>
+
+            <label for="email" class="required-field">Email:</label>
+            <input type="email" name="email" class="w3-input w3-border" required>
+
+            <label for="survey-date" class="required-field">Date of Survey:</label>
+            <input type="date" name="survey_date" class="w3-input w3-border" required>
+
+            <!-- Checkboxes for Campus Preferences -->
+            <h3>What did you like most about the campus?</h3>
+            <div class="horizontal-group">
+                <label><input type="checkbox" name="likes" value="students"> Students</label>
+                <label><input type="checkbox" name="likes" value="location"> Location</label>
+                <label><input type="checkbox" name="likes" value="campus"> Campus</label>
+                <label><input type="checkbox" name="likes" value="atmosphere"> Atmosphere</label>
+                <label><input type="checkbox" name="likes" value="dorm_rooms"> Dorm Rooms</label>
+                <label><input type="checkbox" name="likes" value="sports"> Sports</label>
+            </div>
+
+            <!-- Radio Buttons for Interest Source -->
+            <h3>How did you hear about the university?</h3>
+            <div class="horizontal-group">
+                <label><input type="radio" name="interest_source" value="friends"> Friends</label>
+                <label><input type="radio" name="interest_source" value="television"> Television</label>
+                <label><input type="radio" name="interest_source" value="internet"> Internet</label>
+                <label><input type="radio" name="interest_source" value="other"> Other</label>
+            </div>
+
+            <!-- Dropdown for Recommendation Likelihood -->
+            <h3>Would you recommend this university?</h3>
+            <select name="recommendation" class="w3-select w3-border">
+                <option value="" disabled selected>Choose an option</option>
+                <option value="very_likely">Very Likely</option>
+                <option value="likely">Likely</option>
+                <option value="unlikely">Unlikely</option>
+            </select>
+
+            <!-- Raffle Input -->
+            <h3>Enter at least 10 comma-separated numbers (1-100) for a raffle:</h3>
+            <input type="text" name="raffle_numbers" class="w3-input w3-border"
+                placeholder="Example: 5, 12, 23, 45, 67, 89, 90, 34, 56, 78">
+
+            <!-- Comments Section -->
+            <h3>Additional Comments:</h3>
+            <textarea name="comments" class="w3-input w3-border" rows="4"></textarea>
+
+            <!-- Submit and Cancel Buttons -->
+            <div class="w3-margin-top">
+                <button type="submit" class="w3-button w3-green">Submit</button>
+                <button type="reset" class="w3-button w3-red">Cancel</button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="w3-container w3-green footer">
+        <p>© 2024-2025 George Mason University</p>
+    </div>
+
+</body>
+</html>
